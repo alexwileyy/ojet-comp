@@ -24,7 +24,9 @@ requirejs.config(
 ```
 
 ## Usage
-To use this package, you must be in the root of the project (the top level of the project folder. Simply execute the module by typing ```ojet-comp```, the module will run you through a CLI creation wizard to create your component. Once the wizard is complete, your module will be ready to use.
+To use this package, you must be in the root of the project (the top level of the project folder. Simply execute the module by typing the command below into the terminal window whilst at the root of your project:
+```ojet-comp```
+The module will run you through a CLI creation wizard to create your component. Once the wizard is complete, your module will be ready to use.
 **Note**: Your custom module must still be required inside the define block of whatever view model you intend to use it in.
 
 ## Bugs / Feature Requests
