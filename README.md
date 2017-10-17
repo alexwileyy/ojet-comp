@@ -24,7 +24,7 @@ requirejs.config(
 ```
 
 ## Usage
-To use this package, you must be in the root of the project (the top level of the project folder. Simply execute the module by typing the command below into the terminal window whilst at the root of your project:
+To use this package, you must be in the root of the project (the top level of the project folder). Simply execute the module by typing the command below into the terminal window whilst at the root of your project:
 
 ```$: ojet-comp```
 
