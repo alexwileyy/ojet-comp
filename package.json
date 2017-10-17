@@ -1,0 +1,32 @@
+{
+  "name": "ojet-comp",
+  "version": "1.0.2",
+  "description": "A module for creating custom components with Oracle JET",
+  "main": "app.js",
+  "bin": {
+    "ojet-comp": "bin/test-module.js"
+  },
+  "preferGlobal": "true",
+  "scripts": {
+    "test": "echo \"Hello world\""
+  },
+  "keywords": [
+    "oracle",
+    "ojet",
+    "oracle",
+    "jet"
+  ],
+  "author": "Alex Wiley <alex@alexwiley.co.uk> (http://alexwiley.co.uk)",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "fs": "0.0.1-security",
+    "prompt": "^1.0.0"
+  },
+  "files": [
+    "readme.md"
+  ],
+  "man": [
+    "readme.md"
+  ]
+}
