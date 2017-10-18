@@ -1,8 +1,8 @@
 {
   "name": "ojet-comp",
-  "version": "1.0.2",
+  "version": "1.0.7",
   "description": "A module for creating custom components with Oracle JET",
-  "main": "app.js",
+  "main": "lib/app.js",
   "bin": {
     "ojet-comp": "bin/test-module.js"
   },
@@ -16,6 +16,10 @@
     "oracle",
     "jet"
   ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/alexwileyy/ojet-comp.git"
+  },
   "author": "Alex Wiley <alex@alexwiley.co.uk> (http://alexwiley.co.uk)",
   "license": "ISC",
   "dependencies": {
