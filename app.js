@@ -1,3 +1,7 @@
+#! /usr/bin/env node
+
+'use strict';
+
 const fs = require('fs'),
     prompt = require('prompt'),
     colors = require("colors");
@@ -314,8 +318,7 @@ const init = () => {
 
 const test = () => {
     console.log('Module working!');
-}
+};
 
-exports.moduleTest = test;
-exports.generate = init;
+init();
 
