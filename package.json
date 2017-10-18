@@ -25,6 +25,7 @@
   "dependencies": {
     "colors": "^1.1.2",
     "fs": "0.0.1-security",
+    "inquirer": "^3.3.0",
     "prompt": "^1.0.0"
   },
   "files": [
