@@ -6,19 +6,26 @@ const fs = require('fs'),
     prompt = require('prompt'),
     colors = require("colors");
 
-
+/**
+ * Default options input for program to run.
+ * @type {{dashLength: number, basePath: string, compositePath: string}}
+ */
 let options = {
     dashLength: 90,
     basePath: './src/js',
     compositePath: './src/js/jet-composites'
 };
 
+/**
+ * Checks to make sure that the user is in the root folder of the project
+ * @return {Promise}
+ */
 const checkForRootFolder = () => {
     return new Promise((resolve, reject) => {
-        fs.access('./src', fs.constants.R_OK | fs.constants.W_OK, (err) => {
+        fs.access('./src/js', fs.constants.R_OK | fs.constants.W_OK, (err) => {
             if(err) {
                 console.log(new Array(options.dashLength).join("-"));
-                reject('[ERROR]: User must be at root of project.');
+                reject('[ERROR]: User must be at root of project OR ./src | ./src/js folder does not exist.');
             } else{
                 resolve();
             }
@@ -26,6 +33,11 @@ const checkForRootFolder = () => {
     });
 };
 
+/**
+ * Checks to see whether the required 'jet-composites' folder exists in the project
+ * @if (does not exist) => call createCompositesFolder()
+ * @return {Promise}
+ */
 const checkForComponentFolder = () => {
     return new Promise((resolve, reject) => {
         fs.access('./src/js/jet-composites', fs.constants.R_OK | fs.constants.W_OK, (err) => {
@@ -98,7 +110,7 @@ const promptUser = () => {
                 // resolve(result.name, result.description, result.version)
                 console.log(new Array(options.dashLength).join("-"));
                 resolve({
-                    name: result.name,
+                    name: result.name.toLowerCase(),
                     desc: result.description,
                     version: result.version,
                     styleOpt: result.styleOpt
@@ -167,7 +179,6 @@ const createComponentFolder = (res) => {
 
 /**
  * Generates the JSON file which is used to setup the component meta data.
- *
  * @param name
  * @param desc
  * @param version
@@ -198,6 +209,11 @@ const createJson = (name, desc, version) => {
     });
 };
 
+/**
+ * Generates the loader file placing the component name into the required places.
+ * @param name
+ * @return {Promise}
+ */
 const createLoader = (name) => {
     return new Promise((resolve, reject) => {
         let loaderTemplate =
@@ -219,6 +235,11 @@ const createLoader = (name) => {
     });
 };
 
+/**
+ * Generate the JS code for the view model placing the name into the required places.
+ * @param name
+ * @return {Promise}
+ */
 const createViewModel = (name) => {
     return new Promise((resolve, reject) => {
         let viewModelTemplate =
@@ -240,6 +261,11 @@ const createViewModel = (name) => {
     })
 };
 
+/**
+ * Generates a basic layout for the HTML file so that when the component is loaded, it has some default text to display.
+ * @param name
+ * @return {Promise}
+ */
 const createHTML = (name) => {
     let htmlTemplate =
 `<div class="${name}-component">
@@ -252,6 +278,12 @@ const createHTML = (name) => {
     });
 };
 
+/**
+ * Creates the CSS or SCSS file depending on what the user choose to use. This will create a blank file with a comment
+ * at the top.
+ * @param name
+ * @param opt
+ */
 const createStyles = (name, opt) => {
     let ext;
     let styleTemplate = `/* Component styles for ${name}-componennt should be placed in this file.*/`;
@@ -266,6 +298,14 @@ const createStyles = (name, opt) => {
     })
 };
 
+/**
+ * Returns a promise tree which generates and saves all of the files to the jet-composites folder.
+ * @param name
+ * @param desc
+ * @param version
+ * @param styleOpt
+ * @return {Promise}
+ */
 const saveFiles = (name, desc, version, styleOpt) => {
     return new Promise((resolve, reject) => {
         createJson(name, desc, version)
@@ -290,6 +330,9 @@ const saveFiles = (name, desc, version, styleOpt) => {
     })
 };
 
+/**
+ * Main application logic function, all code is executed and managed from this promise tree.
+ */
 const init = () => {
     //Call the user input for prompt
     checkForRootFolder()
@@ -316,9 +359,8 @@ const init = () => {
         })
 };
 
-const test = () => {
-    console.log('Module working!');
-};
-
+/**
+ * Run the application when the module is called.
+ */
 init();
 
