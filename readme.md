@@ -2,6 +2,9 @@
 
 ```ojet-comp``` is a library developed for Oracle Jet to easily generate custom components and setup peer dependencies inside your Oracle Jet project.
 
+### External Tutorial
+I have written a Medium post which includes an overview of this component along with a tutorial of creating a jet project and using the module in your project. [Read it here](https://medium.com/@speedatw/generating-composite-components-in-oracle-jet-b2f2a432fc55)
+
 ## Installation
 To start using ```ojet-comp``` simply download and install it using npm (make sure the ```-g``` flag is set so that you can use it across multiple projects):
 ```npm install ojet-comp -g```
