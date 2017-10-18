@@ -1,6 +1,6 @@
 {
   "name": "ojet-comp",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A module for creating custom components with Oracle JET",
   "main": "./app.js",
   "bin": {
