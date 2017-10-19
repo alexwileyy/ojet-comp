@@ -26,6 +26,8 @@
     "argv": "0.0.2",
     "colors": "^1.1.2",
     "fs": "0.0.1-security",
-    "inquirer": "^3.3.0"
+    "inquirer": "^3.3.0",
+    "mkdirp": "^0.5.1",
+    "rx-lite-aggregates": "^4.0.8"
   }
 }

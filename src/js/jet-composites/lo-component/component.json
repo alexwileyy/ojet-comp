@@ -1,0 +1,13 @@
+{
+    "name": "lo-component",
+    "description": "undefined",
+    "version": "1.0.0",
+    "displayName": "Lo Component",
+    "icon":{
+        "iconPath":"extension/dt/images/components/card.png",
+        "selectedIconPath":"extension/dt/images/components/card_selected.png",
+        "hoverIconPath":"extension/dt/images/components/card_hover.png"
+    },
+    "jetVersion": "^3.0.0",
+    "properties": {}
+}
