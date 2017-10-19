@@ -7,9 +7,9 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Component Setup](#component-setup)
--- [Adding Your Component To The View Model](#adding-your-component-to-the-view-model)
--- [Adding your componet to your page](#adding-your-component-to-the-page)
--- [Enabling Custom Components In Jet](#enabling-custom-components-in-jet)
+    - [Adding Your Component To The View Model](#adding-your-component-to-the-view-model)
+    - [Adding your componet to your page](#adding-your-component-to-the-page)
+    - [Enabling Custom Components In Jet](#enabling-custom-components-in-jet)
 - [Running A Project With Sass](#serving-with-sass)
 - [Bugs & Feature Requests](#bugs-%2F-feature-requests)
 
