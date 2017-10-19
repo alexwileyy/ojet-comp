@@ -11,7 +11,7 @@
 -- [Adding your componet to your page](#adding-your-component-to-the-page)
 -- [Enabling Custom Components In Jet](#enabling-custom-components-in-jet)
 - [Running A Project With Sass](#serving-with-sass)
-- [Bugs & Feature Requests](#bugs-/-feature-requests)
+- [Bugs & Feature Requests](#bugs-%2F-feature-requests)
 
 ### External Tutorial
 I have written a Medium post which includes an overview of this component along with a tutorial of creating a jet project and using the module in your project. [Read it here](https://medium.com/@speedatw/generating-composite-components-in-oracle-jet-b2f2a432fc55)
