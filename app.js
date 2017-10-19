@@ -12,29 +12,30 @@ const fs = require('fs'),
 const addComponent = require('./lib/util/addComponent'),
     addPage = require('./lib/util/addPage');
 
-/**
- * Default options input for program to run.
- * @type {{dashLength: number, basePath: string, compositePath: string}}
- */
-let options = {
-    dashLength: 90,
-    basePath: './src/js',
-    compositePath: './src/js/jet-composites'
-};
 
 const setupOpts = () => {
     argv.option({
-        name: 'option',
-        short: 'o',
+        name: 'template',
+        short: 't',
         type: 'string',
         description: 'Defines an option for your script',
-        example: "'script --opiton=value' or 'script -o value'"
+        example: "'ojet-comp --template=navdrawer' or 'script -t navdrawer'"
     });
-}
+};
 
 const parseArgs = () => {
-    // setupOpts();
+    //setupOpts()
+    argv.info(
+`        Oracle Jet Comp - Alex Wiley
+        ---
+        Available commands:
+            - page
+            - component
+        
+        Options:
+`);
     let command = argv.run().targets[0] ;
+    let opts = argv.run().options;
     switch (command){
         case 'component':
             addComponent.init();
