@@ -44,7 +44,14 @@ const parseArgs = () => {
             addPage.init();
             break;
         default:
-            logger(colors.red(`[ERROR]: ${command} is not a command. Please try again.`), "both", true);
+            let msg;
+            if(!command){
+                msg = `You must provide a command to the program. Type ojet-comp -h to get assistance.`;
+            }
+            else{
+                msg = `[ERROR]: ${command} is not a command. Please try again or type ojet-comp -h for assistance.`;
+            }
+            logger(colors.red(msg), "both", true);
     }
 };
 
