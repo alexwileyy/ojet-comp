@@ -18,6 +18,7 @@ I have written a Medium post which includes an overview of this component along 
 
 ## Installation
 To start using ```ojet-comp``` simply download and install it using npm (make sure the ```-g``` flag is set so that you can use it across multiple projects):
+
 ```npm install ojet-comp -g```
 
 
