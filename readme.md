@@ -3,12 +3,15 @@
 ```ojet-comp``` is a library developed for Oracle Jet to easily generate custom components and setup peer dependencies inside your Oracle Jet project.
 
 # Index
-- External Tutorial
+- [External Tutorial](#external-tutorial)
 - [Installation](#installation)
-- Usage
--- Adding your componet to your page
-- Enabling Custom Components In Jet
-- Running A Project With Sass
+- [Usage](#usage)
+- [Component Setup](#component-setup)
+-- [Adding Your Component To The View Model](#adding-your-component-to-the-view-model)
+-- [Adding your componet to your page](#adding-your-component-to-the-page)
+-- [Enabling Custom Components In Jet](#enabling-custom-components-in-jet)
+- [Running A Project With Sass](#serving-with-sass)
+- [Bugs & Feature Requests](#bugs-/-feature-requests)
 
 ### External Tutorial
 I have written a Medium post which includes an overview of this component along with a tutorial of creating a jet project and using the module in your project. [Read it here](https://medium.com/@speedatw/generating-composite-components-in-oracle-jet-b2f2a432fc55)
@@ -21,10 +24,21 @@ To start using ```ojet-comp``` simply download and install it using npm (make su
 ## Usage
 To use this package, you must be in the root of the project (the top level of the project folder). Simply execute the module by typing the command below into the terminal window whilst at the root of your project
 
-```$: ojet-comp```
+```$: ojet-comp <action>```
 
 The module will run you through a CLI creation wizard to create your component. Once the wizard is complete, your module will be ready to use.
-**Note**: Your custom module must still be required inside the define block of whatever view model you intend to use it in.
+
+### Actions
+The following actions are currently available:
+- page (generates JET pages ready to be used in your project)
+- components (generates custom web components ready to be imported into your project) 
+
+**Note**: For ```components``` your custom module must still be required inside the define block of whatever view model you intend to use it in.
+
+---
+
+## Component Setup
+For the ```component``` action, a little further setup is required.
 
 ### Adding Your Component To The View Model
 
@@ -49,7 +63,7 @@ Add the ```'ojs/composite'``` and ```'jet-composites/component-name'``` into the
 To include your component on the page, simple write the component in the HTML file for your view model with the component name in the tags. **Note**, components will be automatically appended with -component, therefore if you called your component test, you would render it on the page like so:
 ```<test-component></test-component>```
 
-## Enabling Custom Components In JET
+### Enabling Custom Components In JET
 Oracle JET requires you to specify the custom components module inside your ```main.js``` file, to do so, add the dependency like so:
 ```
 requirejs.config(
