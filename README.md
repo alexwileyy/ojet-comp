@@ -87,3 +87,15 @@ To serve your project with sass, you can use the Oracle Jet CLI. With the ojet c
 
 ## Bugs / Feature Requests
 All bugs and feature requests can be submitted to the public github issue page located [here](https://github.com/alexwileyy/ojet-comp/issues)
+
+## Change Log
+
+**V1.2.0**
+Closed two bugs:
+- [#2](https://github.com/alexwileyy/ojet-comp/issues/2)
+- [#3](https://github.com/alexwileyy/ojet-comp/issues/3)
+
+**V1.0.0**
+Initial creation of component including the features:
+- Add Page
+- Create component
